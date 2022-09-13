@@ -9,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -23,7 +24,7 @@ function App() {
     <Switch>
       <Route path="/home"><Home /></Route>
       <Route path="/login"><Login /></Route>
-      <Route path="/book/:bedType"><Book /></Route>
+      <PrivateRoute path="/book/:bedType"><Book /></PrivateRoute>
       <Route path="/"><Home /></Route>
     </Switch>
 </Router>
