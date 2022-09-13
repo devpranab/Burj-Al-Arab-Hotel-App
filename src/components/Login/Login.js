@@ -26,6 +26,9 @@ const Login = () => {
           setLoggedInUser(signInUser);
           history.replace(from);
         })
+        .catch(error => {
+            console.log(error.message);
+        })
       }
 
     return (
